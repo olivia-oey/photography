@@ -23,16 +23,18 @@
 
   <link rel="stylesheet" href="output.css" />
 <link rel="stylesheet" href="styles.css" />
-
+  
+<script src="https://unpkg.com/lucide@latest"></script>
+  
 <style>
 
 /* ---------- Animated Gears ---------- */
 
 .gear-wrapper{
     position:relative;
-    width:150px;
-    height:120px;
-    margin:0 auto;
+    width:120px;
+    height:90px;
+    margin:0 auto 3rem auto;
 }
 
 .gear{
@@ -54,40 +56,36 @@
     stroke-linejoin:round;
 }
 
+.gear-large,
+.gear-small{
+    position:absolute;
+    color:#737373;
+    stroke-width:1.5;
+}
+
 .gear-large{
-    width:88px;
-    height:88px;
+    width:64px;
+    height:64px;
     left:0;
     bottom:0;
-    transform-origin:center;
-    animation:gearCW 24s linear infinite;
+    animation:gearCW 30s linear infinite;
 }
 
 .gear-small{
-    width:58px;
-    height:58px;
-    right:8px;
-    top:2px;
-    transform-origin:center;
-    animation:gearCCW 24s linear infinite;
+    width:42px;
+    height:42px;
+    right:6px;
+    top:0;
+    animation:gearCCW 30s linear infinite;
 }
-
 @keyframes gearCW{
-    from{
-        transform:rotate(0deg);
-    }
-    to{
-        transform:rotate(360deg);
-    }
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
 }
 
 @keyframes gearCCW{
-    from{
-        transform:rotate(0deg);
-    }
-    to{
-        transform:rotate(-360deg);
-    }
+    from{transform:rotate(0deg);}
+    to{transform:rotate(-360deg);}
 }
 
 /* Fade in nicely */
@@ -201,60 +199,17 @@
         <!-- <section class="max-w-3xl mx-auto px-8 py-28 text-center"> -->
 
     <!-- Decorative Gears -->
-    <div class="gear-wrapper mb-12">
+    <div class="gear-wrapper mb-10">
 
-    <!-- Large Gear -->
-    <div class="gear gear-large">
-        <svg viewBox="0 0 100 100">
+    <i data-lucide="cog" class="gear-large"></i>
 
-            <circle cx="50" cy="50" r="32"/>
-
-            <g class="teeth">
-                <rect x="47" y="4" width="6" height="12" rx="1"/>
-                <rect x="47" y="84" width="6" height="12" rx="1"/>
-
-                <rect x="84" y="47" width="12" height="6" rx="1"/>
-                <rect x="4" y="47" width="12" height="6" rx="1"/>
-
-                <rect x="74" y="13" width="6" height="12" rx="1" transform="rotate(45 77 19)"/>
-                <rect x="74" y="75" width="6" height="12" rx="1" transform="rotate(135 77 81)"/>
-
-                <rect x="20" y="75" width="6" height="12" rx="1" transform="rotate(-135 23 81)"/>
-                <rect x="20" y="13" width="6" height="12" rx="1" transform="rotate(-45 23 19)"/>
-            </g>
-
-            <circle cx="50" cy="50" r="10"/>
-
-        </svg>
-    </div>
-
-    <!-- Small Gear -->
-
-    <div class="gear gear-small">
-        <svg viewBox="0 0 100 100">
-
-            <circle cx="50" cy="50" r="24"/>
-
-            <g class="teeth">
-                <rect x="47" y="8" width="6" height="10" rx="1"/>
-                <rect x="47" y="82" width="6" height="10" rx="1"/>
-
-                <rect x="82" y="47" width="10" height="6" rx="1"/>
-                <rect x="8" y="47" width="10" height="6" rx="1"/>
-
-                <rect x="71" y="16" width="6" height="10" rx="1" transform="rotate(45 74 21)"/>
-                <rect x="71" y="73" width="6" height="10" rx="1" transform="rotate(135 74 78)"/>
-
-                <rect x="23" y="73" width="6" height="10" rx="1" transform="rotate(-135 26 78)"/>
-                <rect x="23" y="16" width="6" height="10" rx="1" transform="rotate(-45 26 21)"/>
-            </g>
-
-            <circle cx="50" cy="50" r="8"/>
-
-        </svg>
-    </div>
+    <i data-lucide="cog" class="gear-small"></i>
 
 </div>
+
+<script>
+lucide.createIcons();
+</script>
 <!-- 
 </section> -->
 
