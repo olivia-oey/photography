@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OLIVIA OEY - Contact</title>
+  <title>OLIVIA OEY.</title>
   <meta name="description"
     content="Structural engineer by training, Architect enthusiast by nature.">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-  <link rel="stylesheet" href="output.css" />
+  <link rel="icon" type="image/x-icon" href="dist/assets/favicon.ico" />
+  <link rel="stylesheet" href="dist/output.css" />
   <link rel="stylesheet" href="styles.css" />
   <!-- Alpine.js -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -19,16 +19,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
   <!-- End - Fonts -->
+  <!-- Start - Fancybox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <!-- End - Fancybox Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      content: ["./dist/*.{html,js}"],
+      theme: {
+        extend:
+                {
+                  fontFamily: {
+                    'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
+                    'signika': ['Signika', 'sans-serif'],
+                  },
+                },
+      },
+      plugins: [],
+    }
+  </script>
 </head>
 
 <body
   class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
   <!-- Navbar -->
   <header class="flex w-full overflow-hidden pt-10 pb-1">
+    <!-- Navbar -->
     <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
       <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
         <div class="mr-4 md:mr-8">
-          <a href="../index.html" class="text-2xl font-signika font-bold">OLIVIA OEY.</a>
+          <a href="index.html" class="text-2xl font-signika font-bold">OLIVIA OEY.</a>
         </div>
         <div class="ml-auto md:hidden flex items-center justify-start">
           <button onclick="menuToggle()" @click="open = !open"
@@ -43,7 +66,7 @@
                 class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
                 :class="{'opacity-0': open } "></span>
               <span aria-hidden="true"
-                class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
+                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
                 :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
             </div>
           </button>
@@ -53,28 +76,26 @@
           <ul id="ulMenu"
             class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
             <li class="group transition duration-300">
-              <a href="../index.html" class="font-signika text-1xl tap-highlight-transparent">PHOTOGRAPHY.
-
+              <a href="index.html" class="font-signika text-1xl tap-highlight-transparent">PHOTOGRAPHY.
+                 <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <li class="group transition duration-300">
+              <a href="dist/work.html" class="font-signika text-1xl tap-highlight-transparent">WORK.
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <li class="group transition duration-300">
+              <a href="dist/about_me.html" class="font-signika text-1xl tap-highlight-transparent">ABOUT ME.
+                <span
+                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <li class="group transition duration-300">
+              <a href="dist/contact.html" class="font-signika text-1xl tap-highlight-transparent">CONTACT.
                 
-                
-              </a>
-            </li>
-            <li class="group transition duration-300">
-              <a href="work.html" class="font-signika text-1xl tap-highlight-transparent">WORK.
-                <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-              </a>
-            </li>
-            <li class="group transition duration-300">
-              <a href="about_me.html" class="font-signika text-1xl tap-highlight-transparent">ABOUT ME.
-                <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-              </a>
-            </li>
-            <li class="group transition duration-300">
-              <a href="contact.html" class="font-signika text-1xl tap-highlight-transparent">CONTACT.
                 <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
@@ -85,76 +106,415 @@
   </header>
 
   
-  <!-- Content -->
+  <!-- First Content -->
   <div class="container mx-auto">
-    <div class="grid grid-cols-2 gap-10 items-start">
-      <section class="col-span-2 md:col-span-1">
-        <div class="max-w-screen-md">
-          <h1 class="text-4xl pt-10 pb-3"><b>GET IN TOUCH.</b></h1>
+    <h1 class="text-4xl pt-10 pb-8 font-bold">DELFT / <i>NETHERLANDS</i>.</h1>
+    <section class="text-neutral-700">
 
-          <p class = "pt-4 pb-4 italic" style = "font-style: italic;">
-            'The essence of the question is the opening up, and keeping open, of possibilities.'
-          </p>
-
-          <div class="flex flex-col md:flex-row md:items-start md:gap-10">
-            <p class="text-base text-neutral-400 mt-5 pb-8">
-              Rather than keeping your wonderful ideas and thoughts to yourself, drop them here! I love deep conversations, be it science, engineering, photography, architecture, books, philosophy and even life in general. Always down to explore different and whacky ideas and projects!     
-            </p>
-    
-          <form class="space-y-8" action="mailto:info@example.com">
-            <div>
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
-                email</label>
-              <input type="email" id="email"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="youremail@email.com" required />
-            </div>
-            
-            <div>
-              <label for="subject"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-              <input type="text" id="subject"
-                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="Let me know what's on your mind!" required />
-            </div>
-            
-            <div class="sm:col-span-2">
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
-                message</label>
-              <textarea id="message" rows="6"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-neutral-900 dark:border-neutral-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Explore your ideas with me." required></textarea>
-            </div>
-            <button type="submit"
-              class="py-3 px-5 text-sm font-medium text-center bg-black dark:bg-white text-white dark:text-black rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-              Send message
-            </button>
-          </form>
-        </div>
-      </section>
+<p class="text-base text-neutral-400 mt-2 pb-4">
+Out of all the European cities we visited in our annual 2025 Europe trip, Delft takes the win. Being the nerd, I was excited about visiting Delft University. It was one of the six universities I applied for graduate studies. A part of me wonders if I would love living and studying in Delft and yes, I think I would. The small alleys and the cobble-stoned walkway is something I would love seeing daily on my walk to classes. Frankly, I realised maybe I just miss learning and I miss the classroom so very much.  
+</p>
       
-      <div class="col-span-2 md:col-span-1 flex items-start relative md:mt-24">
-        <!-- <div
-          class="bg-white dark:bg-neutral-900 p-5 pb-20 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800  hover:rotate-0 transition duration-500 rotate-6 relative"> -->
-        <div
-          class="w-full md:w-[320px] md:mt-5">
-          <img 
-            src="./assets/IMG_9583.JPG"
-            alt="" 
-            class="block w-full object-cover h-auto shadow-lg" 
-          />
+        <div class="container w-full">
+        <div class="flex flex-wrap w-full">
 
-          <p class = "italic text-xs text-gray-500 text-center mt-2">
+
+          
+
+          <div class="flex w-full md:w-1/2 flex-wrap">
+
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_19.jpg"
+                  data-fancybox="gallery">
+                  <img alt="opera house"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_19.jpg" />
+                </a>
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/delft/delft_14.jpg"
+                  data-fancybox="gallery">
+                  <img alt="small canal"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/delft/delft_14.jpg" />
+                </a>
+              </div>
+            </div>
             
-            The happiest I've ever been and I'll ever be · May 27, 2022
-          </p>
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_18.jpg"
+                  data-fancybox="gallery">
+                  <img alt="person walking"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_18.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="w-full p-1">
+              <div class="overflow-hidden w-full">
+                <a href="./photos/travels/sydney/sydney_56.jpg"
+                  data-fancybox="gallery">
+                  <img alt="harbour bridge"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_56.jpg" />
+                </a>
+              </div>
+            </div>
+
+            <div class="w-full p-1">
+              <div class="overflow-hidden w-full">
+                <a href="./photos/travels/sydney/sydney_41.jpg"
+                  data-fancybox="gallery">
+                  <img alt="greenery while hiking"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_41.jpg" />
+                </a>
+              </div>
+            </div>
+
+            <div class="w-full p-1">
+              <div class="overflow-hidden w-full">
+                <a href="./photos/travels/sydney/sydney_38.jpg"
+                  data-fancybox="gallery">
+                  <img alt="greenery while hiking"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_38.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="w-full p-1">
+              <div class="overflow-hidden w-full">
+                <a href="./photos/travels/sydney/sydney_05.jpg"
+                  data-fancybox="gallery">
+                  <img alt="waves crashing high shutter"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_05.jpg" />
+                </a>
+              </div>
+            </div>
+
+
+            <div class="w-full p-1">
+              <div class="overflow-hidden w-full">
+                <a href="./photos/travels/sydney/sydney_04.jpg"
+                  data-fancybox="gallery">
+                  <img alt="waves crashing low shutter"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_04.jpg" />
+                </a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="flex w-full md:w-1/2 flex-wrap">
+            
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/delft/delft_07.jpg"
+                  data-fancybox="gallery">
+                  <img alt="delft uni library"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/delft/delft_07.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_24.jpg"
+                  data-fancybox="gallery">
+                  <img alt="girls playing volleyball in the beach"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_24.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_92.jpg"
+                  data-fancybox="gallery">
+                  <img alt="guy surfing"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_92.jpg" />
+                </a>
+              </div>
+            </div>
+
+
+          <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/delft/delft_18.jpg"
+                  data-fancybox="gallery">
+                  <img alt="delft uni library"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/delft/delft_18.jpg" />
+                </a>
+              </div>
+            </div>
+
+          <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_47.jpg"
+                  data-fancybox="gallery">
+                  <img alt="lake while trekking"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_47.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_52.jpg"
+                  data-fancybox="gallery">
+                  <img alt="boat at harbour"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_52.jpg" />
+                </a>
+              </div>
+            </div>
+                     
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_15.jpg"
+                  data-fancybox="gallery">
+                  <img alt="central park"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_15.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_16.jpg"
+                  data-fancybox="gallery">
+                  <img alt="uts frank gehry"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_16.jpg" />
+                </a>
+              </div>
+            </div>
+
+
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_11.jpg"
+                  data-fancybox="gallery">
+                  <img alt="crowne casino"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_11.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_97.jpg"
+                  data-fancybox="gallery">
+                  <img alt="sydney urban city"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_97.jpg" />
+                </a>
+              </div>
+            </div>
+
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_21.jpg"
+                  data-fancybox="gallery">
+                  <img alt="girls picnic at coogee"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_21.jpg" />
+                </a>
+              </div>
+            </div>
+            
+          </div>
+
+
+          
+           <div class="flex w-full flex-wrap">
+            
+            <div class="w-full p-1">
+              <div class="overflow-hidden w-full h-90 md:h-90">
+                <a href="./photos/travels/sydney/sydney_06.jpg"
+                  data-fancybox="gallery">
+                  <img alt="sydney skyline"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_06.jpg" />
+                </a>
+              </div>
+            </div>
+            
+          </div>
+                
+               
+          <div class="flex w-full md:w-1/2 flex-wrap">
+
+          <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_25.jpg"
+                  data-fancybox="gallery">
+                  <img alt="girl walking by the beach"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_25.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_27.jpg"
+                  data-fancybox="gallery">
+                  <img alt="guy out of water"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_27.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_48.jpg"
+                  data-fancybox="gallery">
+                  <img alt="forrest during trekking"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_48.jpg" />
+                </a>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="flex w-full md:w-1/2 flex-wrap">
+            
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_80.jpg"
+                  data-fancybox="gallery">
+                  <img alt="people crossing tram"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_80.jpg" />
+                </a>
+              </div>
+            </div>
+
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_94.jpg"
+                  data-fancybox="gallery">
+                  <img alt="two men walking"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_94.jpg" />
+                </a>
+              </div>
+            </div>
+
+             <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_98.jpg"
+                  data-fancybox="gallery">
+                  <img alt="birds"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_98.jpg" />
+                </a>
+              </div>
+            </div>
+            
+            
+          </div>
+
+
+          <div class="flex w-full flex-wrap">
+            
+            <div class="w-full p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_35.jpg"
+                  data-fancybox="gallery">
+                  <img alt="hiking"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_35.jpg" />
+                </a>
+              </div>
+            </div>
+            
+          </div>
+          
+           <div class="flex w-full md:w-1/2 flex-wrap">
+          
+           <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_82.jpg"
+                  data-fancybox="gallery">
+                  <img alt="boys about to surf"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_82.jpg" />
+                </a>
+              </div>
+            </div>
+
+             <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_86.jpg"
+                  data-fancybox="gallery">
+                  <img alt="newtown"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_86.jpg" />
+                </a>
+              </div>
+            </div>
+             
+          </div>
+
+          <div class="flex w-full md:w-1/2 flex-wrap">
+            
+            <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_43.jpg"
+                  data-fancybox="gallery">
+                  <img alt="camping"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_43.jpg" />
+                </a>
+              </div>
+            </div>
+
+             <div class="w-full md:w-1/2 p-1">
+              <div class="overflow-hidden h-full w-full">
+                <a href="./photos/travels/sydney/sydney_63.jpg"
+                  data-fancybox="gallery">
+                  <img alt="coffee shop in syd"
+                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
+                    src="./photos/travels/sydney/sydney_63.jpg" />
+                </a>
+              </div>
+            </div>
+            
+          </div>
           
         </div>
-
-        </div>
       </div>
-    </div>
+    </section>
   </div>
+
+
+
+
+  
+
+
+  
   <!-- Footer -->
   <footer>
     <div class="max-w-screen-xl py-16 mx-auto">
@@ -164,9 +524,9 @@
           <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
             Jakarta, Indonesia
           </p>
-          
           <div class="flex mx-auto">
             <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
+              
               <!-- <a class="transition duration-300 hover:opacity-75" href="https://www.facebook.com" target="_blank"
                 rel="noreferrer">
                 <span class="sr-only"> Facebook </span>
@@ -206,16 +566,18 @@
           </div>
         </div>
       </div>
-      
       <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
         © 2026 Developed and Designed by
         <a href="https://www.linkedin.com/in/oliviaoey/" class="underline">Olivia Oey</a>
       </p>
     </div>
   </footer>
-  
-  <script src="fade_in.js"></script>
-  <script src="menu.js"></script>
+  <!-- Script for the LightBox -->
+  <script>
+    Fancybox.bind("[data-fancybox]", {});
+  </script>
+  <script src="dist/fade_in.js"></script>
+  <script src="dist/menu.js"></script>
 </body>
 
 </html>
