@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OLIVIA OEY - Work In Progress</title>
+  <title>OLIVIA OEY - About Me</title>
   <meta name="description"
     content="Structural engineer by training, Architect enthusiast by nature.">
   <!-- Favicon -->
@@ -22,41 +22,9 @@
   <!-- End - Fonts -->
 </head>
 
-<style>
-  .gear {
-    transform-box: fill-box;
-    transform-origin: center;
-  }
-
-  .gear {
-    animation: spin 5s linear infinite;
-  }
-
-  .gear.reverse {
-    animation: spinReverse 5s linear infinite;
-  }
-
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  @keyframes spinReverse {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .gear {
-      animation: none;
-    }
-  }
-</style>
-  
 <body
-  class="dark:bg-black bg-white min-h-screen flex flex-col text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
   <!-- Navbar -->
-  <main class="flex-1 flex items-center justify-center">
   <header class="flex w-full overflow-hidden pt-10 pb-1">
     <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
       <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
@@ -94,16 +62,16 @@
             </li>
             <li class="group transition duration-300">
               <a href="work.html" class="font-signika text-1xl">WORK.
-                <span
+                 <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
+                <span                  
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white">
                 </span>
               </a>
             </li>
             <li class="group transition duration-300">
               <a href="about_me.html" class="font-signika text-1xl">ABOUT ME.
-                <span
+                <span                  
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white">
-                </span>
               </a>
             </li>
             <li class="group transition duration-300">
@@ -118,37 +86,45 @@
       </div>
     </nav>
   </header>
-  </main>
-
   <!-- Content -->
-<main class="min-h-[calc(100vh-180px)] flex items-center justify-center">
-  <div class="flex flex-col items-center">
+  <div class="container mx-auto">
+    <h1 class="text-4xl pt-10 pb-8"><b>ABOUT ME</b></h1>
+    <div class="grid grid-cols-2 gap-25 md:gap-10">
+      <div class="col-span-2 md:col-span-1">
+        <!-- <div -->
+          <!-- class="bg-white dark:bg-neutral-900 p-5 pb-28 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800"> -->
+        <div
+          className="bg-white dark:bg-neutral-1000 p-50 pb-50 m-50 md:m-50">
+          <img src="./assets/profile.jpg" alt="" class="w-15"/>
+            <!-- class="smooth-edges flex flex-col w-full aspect-square object-cover h-auto" /> -->
+          <!-- <div class="absolute bottom-0 left-0 right-0 text-center">
+            <!-- <p class="text-gray-800 dark:text-slate-200 pb-7 h-full text-6xl font-nothingyoucoulddo">me</p> -->
+          <!-- </div> -->
+        </div>
 
-    <!-- Gears -->
-<div class="relative w-28 h-24 mb-8 flex items-center justify-center overflow-visible z-10">
-  <!-- Large Gear -->
-  <svg
-    class="gear absolute left-1 top-1 w-14 h-14 text-neutral-500 dark:text-neutral-500 block"
-    viewBox="0 0 512 512"
-    fill="currentColor"
-    aria-hidden="true">
-    <path d="M495.9 166.6c3.2 8.7.5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6.3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227 1.2 241.2 0 255.7 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 100-160 80 80 0 000 160z"/>
-  </svg>
-
-  <!-- Small Gear -->
-  <svg
-    class="gear reverse absolute left-14 top-3 w-10 h-10 text-neutral-500 dark:text-neutral-500 block"
-    viewBox="0 0 512 512"
-    fill="currentColor"
-    aria-hidden="true">
-    <path d="M495.9 166.6c3.2 8.7.5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6.3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227 1.2 241.2 0 255.7 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 100-160 80 80 0 000 160z"/>
-  </svg>
-</div>
-
+      </div>
+      <section class="font-normal text-center text-base md:text-start mx-3 col-span-2 md:col-span-1 my-auto">
+        <div class="block md:hidden">
+          <p class="text-3xl font-serif font-bold italic mb-6">firmitas, utilitas, venustas. <span class="animate-wave">👋</span></p>
+        </div>
+        <p class = "hidden md:block text-3xl font-serif font-bold mb-1" style="font-style:italic;">"firmitas, utilitas, venustas."</p>
+        <p class="hidden md:block text-2xl font-serif">  strength, utility, beauty. </p>
+        <p class="mb-4">
+          <br />Hi! I am a structural engineer by training but an architecture enthusiast at heart. I read (a lot), do heated pilates, run, play the piano and organ, crochet; but, if I have to chose, 
+          photography is it.  
+        </p> 
+        <p class="mb-4">After having lived across three continents, from the Land Down Under to Beantown and to the Little Red Dot, I am finally setled in, back in my hometown Jakarta. 
+        I work as a structural engineer now, helping my family build our small yet humble construction business. My appreciation for architecture and parametric design only stemmed during my graduate study on structural mechanics at MIT!   
+        </p>
+        <p class="mb-4">
+          This page is essentially a culmination of my passion, interests, experiences and my perspective on the many things I love and enjoy doing. I do hope you find pleasure in what my eye and brain consider aesthetically pleasing. 
+        </p>
+        <p class="mb-4">
+          Feel free to reach out and connect with me if anything you find in here strikes your interest! 
+        </p>
+      </section>
+    </div>
   </div>
-</main>
-
-  
   <!-- Footer -->
   <footer>
     <div class="max-w-screen-xl py-16 mx-auto">
@@ -169,7 +145,7 @@
                     clipRule="evenodd" />
                 </svg>
               </a>
-
+              
               <a class="transition duration-300 hover:opacity-75" href="https://www.instagram.com/livsvisual/" target="_blank"
                 rel="noreferrer">
                 <span class="sr-only"> Instagram </span>
@@ -179,19 +155,17 @@
                     clipRule="evenodd" />
                 </svg>
               </a>
-
-              <a class="transition duration-300 hover:opacity-75"
-                href="mailto:oliviaoey18@gmail.com?subject=&body=Hi Olivia! " target="_blank" rel="noreferrer">
+              
+              <a class="transition duration-300 hover:opacity-75" href="mailto:oliviaoey18@gmail.com?subject=&body=Hi Olivia! " target="_blank"
+                rel="noreferrer">
                 <span class="sr-only"> Email </span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                  class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                 </svg>
               </a>
-
-              <a class="transition duration-300 hover:opacity-75" href="https://www.linkedin.com/in/oliviaoey/"
-                target="_blank" rel="noreferrer">
+              
+              <a class="transition duration-300 hover:opacity-75" href="https://www.linkedin.com/in/oliviaoey/" target="_blank"
+                rel="noreferrer">
                 <span class="sr-only">LinkedIn</span>
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
