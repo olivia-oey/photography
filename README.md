@@ -19,8 +19,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -111,7 +109,7 @@ This project is a web-based portfolio that beautifully showcases photography wor
 
 ## 📧 Contact <a name="contact"></a>
 
-João Franco - https://www.linkedin.com/in/joão-franco-452161195/
+João Franco - [https://www.linkedin.com/in/oliviaoey/]
 
 Project Link: [https://github.com/olivia-oey/photography/](https://olivia-oey.github.io/photography/index.html)
 
