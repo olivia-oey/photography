@@ -23,7 +23,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/olivia-oey/photography">
-    <img src="dist/assets/ICON.jpg" alt="Logo" width="80" height="80">
+    <img src="dist/assets/ICON.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Portfolio</h3>
