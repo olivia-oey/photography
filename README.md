@@ -24,17 +24,17 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/JoaoFranco03/photography-portfolio">
-    <img src="dist/assets/Logo.jpg" alt="Logo" width="80" height="80">
+  <a href="https://github.com/olivia-oey/photography">
+    <img src="dist/assets/ICON.jpg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Photography Portfolio</h3>
+  <h3 align="center">Portfolio</h3>
 
   <p align="center">
-    A Website created using Tailwind CSS, HTML, CSS <br /> and JavaScript that can be used as a Photography Portfolio.
+    A Website created using Tailwind CSS, HTML, CSS <br /> and JavaScript that can be used as a Personal (Photography) Portfolio.
     <br />
     <br />
-    <a href="https://photography-portfolio-joaofranco03.netlify.app/">View Demo</a>
+    <a href="https://olivia-oey.github.io/photography/index.html">View Demo</a>
     <br />
     <br />
     
@@ -73,7 +73,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/JoaoFranco03/photography-portfolio)
 
-This project is a web-based portfolio that beautifully showcases the photography work of Sophia Williams, a fictional photographer. The portfolio was skillfully built using a combination of powerful front-end technologies, including Tailwind CSS, CSS, HTML, and JavaScript.
+This project is a web-based portfolio that beautifully showcases photography work and the user. The portfolio was skillfully built using a combination of powerful front-end technologies, including Tailwind CSS, CSS, HTML, and JavaScript.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,18 +85,6 @@ This project is a web-based portfolio that beautifully showcases the photography
 - [![Tailwind][tailwind-badge]][tailwind-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Quick Start <a name="quick-start"></a>
-
-Create your own page with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/JoaoFranco03/photography-portfolio)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🎯 Getting Started <a name="getting-started"></a>
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### 🏗️ Installation <a name="installation"></a>
 
@@ -119,43 +107,13 @@ To get a local copy up and running follow these simple example steps.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Ko-fi -->
-
-## ☕ Support Me on Ko-fi
-
-If you find this project useful, consider supporting me on Ko-fi. Thanks for checking it out!  
-
-<a href="https://ko-fi.com/joaofranco03" target="_blank">
-    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" style="height:40px;">
-</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## 📜 License <a name="license"></a>
-
-Distributed under the GPL-3.0 License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CONTACT -->
 
 ## 📧 Contact <a name="contact"></a>
 
 João Franco - https://www.linkedin.com/in/joão-franco-452161195/
 
-Project Link: [https://github.com/JoaoFranco03/photography-portfolio/](https://github.com/JoaoFranco03/photography-portfolio/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## 🌟 Acknowledgments <a name="acknowledgments"></a>
-
-- [FancyBox](https://fancyapps.com/fancybox/)
-- [Unsplash](https://unsplash.com/)
-- [Tailwind Documentation](https://tailwindcss.com/docs/installation)
+Project Link: [https://github.com/olivia-oey/photography/](https://olivia-oey.github.io/photography/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
