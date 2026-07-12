@@ -88,13 +88,13 @@ This project is a web-based portfolio that beautifully showcases photography wor
 
 1. Clone the repo
 
-```sh
- git clone https://github.com/JoaoFranco03/photography-portfolio/.git
+```oo
+ git clone https://github.com/olivia-oey/photography/.git
 ```
 
 2.  Run the following command:
 
-```sh
+```oo
  npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
 3.  Run the Project in a Server
@@ -109,7 +109,7 @@ This project is a web-based portfolio that beautifully showcases photography wor
 
 ## 📧 Contact <a name="contact"></a>
 
-João Franco - [https://www.linkedin.com/in/oliviaoey/]
+Olivia Oey - [https://www.linkedin.com/in/oliviaoey/]
 
 Project Link: [https://github.com/olivia-oey/photography/](https://olivia-oey.github.io/photography/index.html)
 
@@ -134,7 +134,6 @@ Project Link: [https://github.com/olivia-oey/photography/](https://olivia-oey.gi
 [css-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
 [js-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [js-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-[license-url]: https://github.com/JoaoFranco03/photography-portfolio/blob/main/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/joão-franco-452161195/
 [product-screenshot]: dist/assets/mockup.png
