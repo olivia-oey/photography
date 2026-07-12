@@ -69,7 +69,7 @@
 
 # 📋 About The Project <a name="about-the-project"></a>
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/JoaoFranco03/photography-portfolio)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/olivia-oey/photography/)
 
 This project is a web-based portfolio that beautifully showcases photography work and the user. The portfolio was skillfully built using a combination of powerful front-end technologies, including Tailwind CSS, CSS, HTML, and JavaScript.
 
